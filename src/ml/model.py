@@ -9,7 +9,6 @@ from sklearn.model_selection import (
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.metrics import mean_absolute_error
 from .fetch_data import load_dataset
-import matplotlib.pyplot as plt
 
 from sklearn.impute import SimpleImputer
 
@@ -43,6 +42,8 @@ def build_plots(ds=None):
     """
     Examples of plots to evaluate data visually, e.g. to look for correlations.
     """
+
+    import matplotlib.pyplot as plt
 
     dataset = ds or load_dataset()
     # print("build_plots")

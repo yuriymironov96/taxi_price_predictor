@@ -1,8 +1,6 @@
-import kagglehub
-from kagglehub import KaggleDatasetAdapter
-
-
 def load_dataset():
+    import kagglehub
+    from kagglehub import KaggleDatasetAdapter
     # Download latest version
     path = kagglehub.dataset_download("denkuznetz/taxi-price-prediction")
     dataset = kagglehub.dataset_load(
