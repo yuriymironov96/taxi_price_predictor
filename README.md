@@ -1,6 +1,6 @@
 # About
 
-A simple ML project inspired by the 2nd chapter of[Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow](https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/), 3rd edition.
+A simple ML project inspired by the 2nd chapter of [Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow](https://www.oreilly.com/library/view/hands-on-machine-learning/9781492032632/), 3rd edition.
 
 This project features a [taxi pricing dataset](https://www.kaggle.com/datasets/denkuznetz/taxi-price-prediction) and techniques from the book to clean the data, train a couple of ML algorithms, choose the best one and deploy it as a pretrained model.
 
