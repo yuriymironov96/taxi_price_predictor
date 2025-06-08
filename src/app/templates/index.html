@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Taxi Fare Estimator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap 5 CSS CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: #f8f9fa;
+      }
+      .card {
+        margin-top: 50px;
+      }
+      .form-label {
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white text-center">
+          <h2>Taxi Fare Estimator</h2>
+        </div>
+        <div class="card-body">
+          <form method="post">
+            <div class="mb-3">
+              <label class="form-label">Trip Distance (km)</label>
+              <input
+                type="number"
+                class="form-control"
+                name="distance"
+                step="0.01"
+                min="0"
+                max="50"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Time of Day</label>
+              <select class="form-select" name="time_of_day">
+                <option>Morning</option>
+                <option>Afternoon</option>
+                <option>Evening</option>
+                <option>Night</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Day of Week</label>
+              <select class="form-select" name="day_of_week">
+                <option>Weekday</option>
+                <option>Weekend</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Passenger Count</label>
+              <input
+                type="number"
+                class="form-control"
+                name="passenger_count"
+                min="1"
+                max="6"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Traffic Conditions</label>
+              <select class="form-select" name="traffic">
+                <option>Low</option>
+                <option>Medium</option>
+                <option>High</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Weather</label>
+              <select class="form-select" name="weather">
+                <option>Clear</option>
+                <option>Rain</option>
+                <option>Fog</option>
+                <option>Snow</option>
+              </select>
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label">Trip Duration (minutes)</label>
+              <input
+                type="number"
+                class="form-control"
+                name="duration"
+                step="1"
+                min="1"
+                max="100"
+                required
+              />
+            </div>
+
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary">
+                Estimate Fare
+              </button>
+            </div>
+          </form>
+
+          {% if predicted_price is defined %}
+          <div class="alert alert-success mt-4 text-center">
+            <h4>Estimated Fare: ${{ predicted_price }}</h4>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap 5 JS CDN (optional, for components) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
