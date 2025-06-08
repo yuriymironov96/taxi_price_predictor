@@ -4,11 +4,15 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-joblib = "*"
 fastapi = "*"
 uvicorn = {extras = ["standard"], version = "*"}
 jinja2 = "*"
 python-multipart = "*"
+scikit-learn = "*"
+joblib = "*"
+pandas = "*"
+numpy = "*"
+scipy = "*"
 
 [dev-packages]
 kagglehub = {extras = ["pandas-datasets"], version = "*"}
